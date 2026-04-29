@@ -3,8 +3,17 @@ import Link from 'next/link';
 import React from 'react';
 import { BiDownload } from 'react-icons/bi';
 import { FaHeart } from 'react-icons/fa';
+// {
+//     "id": 1,
+//     "title": "The Midnight Library",
+//     "author": "Matt Haig",
+//     "description": "A novel about a library between life and death, where each book represents a different life you could have lived.",
+//     "category": "Story",
+//     "available_quantity": 5,
+//     "image_url": "/images/1.jpg"
+//   },
 
-const BookCard = () => {
+const BookCard = ({book}) => {
     return (
         <div >
       <Card className="border rounded-xl">
@@ -18,12 +27,12 @@ const BookCard = () => {
           /> */}
 
           <Chip size="sm" className="absolute right-2 top-2">
-            {photo.category}
+            {book.category}
           </Chip>
         </div>
 
         <div>
-          <h2 className="font-medium">{photo.title}</h2>
+          <h2 className="font-medium">{book.title}</h2>
         </div>
 
         <div className="flex gap-5">
@@ -31,7 +40,7 @@ const BookCard = () => {
             <p>
               <FaHeart />
             </p>
-            <p>{photo.likes}</p>
+            <p>{book.image_url}</p>
           </div>
 
           <Separator orientation="vertical" />
@@ -40,11 +49,12 @@ const BookCard = () => {
             <p>
               <BiDownload />
             </p>
-            <p>{photo.downloads}</p>
+            <p>{book.downloads}</p>
           </div>
         </div>
 
-        <Link href={`/all-photos/${photo.id}`}>
+        <Link >
+        {/* href={`/all-books/${photo.id}`} */}
           <Button variant="outline" className={"w-full"}>
             View
           </Button>
