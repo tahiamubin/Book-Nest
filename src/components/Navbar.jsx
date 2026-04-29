@@ -42,13 +42,13 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Image
+          {/* <Image
             src={"/images/logo.png"}
             alt="book next logo"
             width={100}
             height={100}
             className="dark:brightness-200"
-          />
+          /> */}
           <a href={"/"} className="btn btn-ghost text-xl">
             Book Nest
           </a>

@@ -1,30 +1,30 @@
 [
   {
     "id": 1,
-    "title": "The Midnight Library",
-    "author": "Matt Haig",
-    "description": "A novel about a library between life and death, where each book represents a different life you could have lived.",
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "description": "A young boy discovers he is a wizard and begins his journey at Hogwarts School of Witchcraft and Wizardry.",
     "category": "Story",
-    "available_quantity": 5,
+    "available_quantity": 8,
     "image_url": "/images/1.jpg"
   },
   {
     "id": 2,
-    "title": "Clean Code",
-    "author": "Robert C. Martin",
-    "description": "A handbook of agile software craftsmanship that teaches developers how to write readable, maintainable code.",
-    "category": "Tech",
-    "available_quantity": 8,
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "description": "An epic fantasy adventure following Frodo Baggins on a quest to destroy the One Ring and save Middle-earth.",
+    "category": "Story",
+    "available_quantity": 5,
     "image_url": "/images/2.jpg"
   },
-  {
+   {
     "id": 3,
-    "title": "A Brief History of Time",
-    "author": "Stephen Hawking",
-    "description": "An exploration of the universe's biggest questions — from the Big Bang to black holes — written for general audiences.",
-    "category": "Science",
-    "available_quantity": 3,
-    "image_url": "/images/3.jpg"
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A chilling dystopian novel set in a totalitarian society ruled by Big Brother, where truth is constantly rewritten.",
+    "category": "Story",
+    "available_quantity": 10,
+    "image_url": "/image/3.jpg"
   },
   {
     "id": 4,
@@ -42,7 +42,7 @@
     "description": "A timeless guide covering programming best practices, tools, and the mindset needed to become an effective software developer.",
     "category": "Tech",
     "available_quantity": 6,
-    "image_url": "/images/5.jap"
+    "image_url": "/images/5.jpg"
   },
   {
     "id": 6,

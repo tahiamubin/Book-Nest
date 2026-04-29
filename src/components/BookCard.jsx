@@ -1,4 +1,5 @@
 import { Button, Card, Chip, Separator } from '@heroui/react';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { BiDownload } from 'react-icons/bi';
@@ -16,15 +17,15 @@ import { FaHeart } from 'react-icons/fa';
 const BookCard = ({book}) => {
     return (
         <div >
-      <Card className="border rounded-xl">
+      <Card className=' transition-transform duration-300 hover:scale-105'>
         <div className="relative w-full aspect-square">
-          {/* <Image
-            src={photo.imageUrl}
+          <Image
+            src={book.image_url}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            alt={photo.title}
-            className="object-cover rounded-xl"
-          /> */}
+            alt={book.title}
+            className="object-cover rounded-xl  !inset-2"
+          />
 
           <Chip size="sm" className="absolute right-2 top-2">
             {book.category}
@@ -32,31 +33,22 @@ const BookCard = ({book}) => {
         </div>
 
         <div>
-          <h2 className="font-medium">{book.title}</h2>
+          <h2 className="text-xl font-bold p-2">{book.title}</h2>
         </div>
 
         <div className="flex gap-5">
-          <div className="flex items-center gap-2">
-            <p>
-              <FaHeart />
-            </p>
-            <p>{book.image_url}</p>
-          </div>
+
 
           <Separator orientation="vertical" />
 
           <div className="flex items-center gap-2">
-            <p>
-              <BiDownload />
-            </p>
-            <p>{book.downloads}</p>
           </div>
         </div>
 
-        <Link >
+        <Link href={'/'} >
         {/* href={`/all-books/${photo.id}`} */}
-          <Button variant="outline" className={"w-full"}>
-            View
+          <Button  className={"w-full btn btn-active"}>
+            View Detail
           </Button>
         </Link>
       </Card>
