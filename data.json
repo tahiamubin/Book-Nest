@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "description": "A novel about a library between life and death, where each book represents a different life you could have lived.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "/images/1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "A handbook of agile software craftsmanship that teaches developers how to write readable, maintainable code.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "/images/2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "An exploration of the universe's biggest questions — from the Big Bang to black holes — written for general audiences.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "/images/3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A philosophical novel about a young Andalusian shepherd's journey to find treasure and discover his personal legend.",
+    "category": "Story",
+    "available_quantity": 10,
+    "image_url": "/images/4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt & David Thomas",
+    "description": "A timeless guide covering programming best practices, tools, and the mindset needed to become an effective software developer.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "/images/5.jap"
+  },
+  {
+    "id": 6,
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "description": "A sweeping narrative of humanity's history from the Stone Age through the 21st century, blending history and science.",
+    "category": "Science",
+    "available_quantity": 7,
+    "image_url": "/images/6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A dystopian novel set in a totalitarian society where Big Brother surveils every citizen and truth is controlled by the state.",
+    "category": "Story",
+    "available_quantity": 4,
+    "image_url": "/images/7.jpg"
+  },
+  {
+    "id": 8,
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "description": "A deep dive into the core mechanisms of the JavaScript language, covering types, scopes, closures, and async patterns.",
+    "category": "Tech",
+    "available_quantity": 9,
+    "image_url": "/images/8.jpg"
+  },
+  {
+    "id": 9,
+    "title": "The Gene: An Intimate History",
+    "author": "Siddhartha Mukherjee",
+    "description": "A compelling history of the gene — from Mendel's peas to CRISPR — and its profound impact on identity, medicine, and society.",
+    "category": "Science",
+    "available_quantity": 2,
+    "image_url": "/images/9.jpg"
+  },
+  {
+    "id": 10,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A powerful story of racial injustice and moral growth seen through the eyes of young Scout Finch in the American South.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "/images/10.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Designing Data-Intensive Applications",
+    "author": "Martin Kleppmann",
+    "description": "An in-depth guide to the principles behind building scalable, reliable, and maintainable data systems and distributed databases.",
+    "category": "Tech",
+    "available_quantity": 5,
+    "image_url": "/images/11.png"
+  },
+  {
+    "id": 12,
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "description": "A groundbreaking work in evolutionary biology that introduces the gene-centered view of evolution and the concept of memes.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "/images/12.jpg"
+  }
+]
