@@ -45,8 +45,7 @@ const BookCard = ({book}) => {
           </div>
         </div>
 
-        <Link href={'/'} >
-        {/* href={`/all-books/${photo.id}`} */}
+        <Link href={`/all-books/${book.id}`} >
           <Button  className={"w-full btn btn-active"}>
             View Detail
           </Button>

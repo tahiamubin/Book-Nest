@@ -59,7 +59,7 @@ const Navbar = () => {
               <Link href={"/"}>Home</Link>
             </li>
             <li>
-              <Link href={"/all-photos"}>All Photos</Link>
+              <Link href={"/all-books"}>All Books</Link>
             </li>
             <li>
               <Link href={"/pricing"}>Pricing</Link>
@@ -69,8 +69,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end gap-3">
+          <a href="/signin" className="btn">Log In</a>
+          <a href="/signout" className="btn">log Out</a>
         </div>
       </div>
     </div>
