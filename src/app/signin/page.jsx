@@ -14,33 +14,36 @@ import {
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
 
-
 export default function SignInPage() {
-    const router = useRouter();
+  const router = useRouter();
   const onSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-   
+
     //console.log({name, email, password, image})
     //RKeQVZ2YIUvctshG
 
-    const {data, error} = await authClient.signIn.email ({
-        password,
-        email,
-    })
-    if(!error){
-        router.push('/');
+    const { data, error } = await authClient.signIn.email({
+      password,
+      email,
+    });
+    if (!error) {
+      router.push("/");
     }
-    console.log({data, error});
+    console.log({ data, error });
   };
+  const handleSignIn = async() =>{
+    await authClient.signIn.social({
+    provider: "google",
+  });
+  }
 
   return (
     <Card className=" mx-auto w-125 py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">Sign Up</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
-    
         <TextField
           isRequired
           name="email"
@@ -85,13 +88,14 @@ export default function SignInPage() {
           <FieldError />
         </TextField>
 
-        <div className="flex gap-2">
-          <Button type="submit" variant="outline">
+        <div>
+          <Button type="submit" variant="outline" >
             <Check />
             Submit
           </Button>
-          <Button type="reset" variant="outline">
-            Reset
+          <p className="text-xl text-center mb-2">Or,</p>
+          <Button onClick={handleSignIn} type="submit" variant="outline" className={'w-full'}>
+            Sign In with Google
           </Button>
         </div>
       </Form>
