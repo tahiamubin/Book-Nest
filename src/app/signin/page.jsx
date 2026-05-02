@@ -27,21 +27,25 @@ export default function SignInPage() {
     const { data, error } = await authClient.signIn.email({
       password,
       email,
+      callbackURL: '/'
     });
-    if (!error) {
-      router.push("/");
+    
+    if (error) {
+      alert("login not successful")
+        router.push("/signout");
     }
-    console.log({ data, error });
+   
+    //console.log({ data, error });
   };
-  const handleSignIn = async() =>{
+  const handleSignIn = async () => {
     await authClient.signIn.social({
-    provider: "google",
-  });
-  }
+      provider: "google",
+    });
+  };
 
   return (
     <Card className=" mx-auto w-125 py-10 mt-5">
-      <h1 className="text-center text-2xl font-bold">Sign Up</h1>
+      <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField
@@ -88,16 +92,27 @@ export default function SignInPage() {
           <FieldError />
         </TextField>
 
-        <div>
-          <Button type="submit" variant="outline" >
-            <Check />
-            Submit
+        <div className="flex gap-2">
+          <Button href='/signout' type="submit" variant="outline" >
+            
+            Log In
           </Button>
-          <p className="text-xl text-center mb-2">Or,</p>
-          <Button onClick={handleSignIn} type="submit" variant="outline" className={'w-full'}>
+          <Button type="submit" variant="outline" >
+        
+            Register
+          </Button>
+          
+         
+        </div>
+        <p className="text-xl text-center mb-2">Or,</p>
+         <Button
+            onClick={handleSignIn}
+            type="submit"
+            variant="outline"
+            className={"w-full"}
+          >
             Sign In with Google
           </Button>
-        </div>
       </Form>
     </Card>
   );

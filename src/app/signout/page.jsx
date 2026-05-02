@@ -12,8 +12,10 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { useRouter } from "next/navigation";
 
 export default function SignUpPage() {
+  const router = useRouter();
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -24,14 +26,28 @@ export default function SignUpPage() {
     //console.log({name, email, password, image})
     //RKeQVZ2YIUvctshG
 
+    //7k#bN9!pQr2wZ@xY
+
     const {data, error} = await authClient.signUp.email ({
         name,
         password,
         image,
         email,
+        
     })
     console.log({data, error});
+    if (!error){
+        router.push('/');
+    }
+    else { 
+         alert("SignUp not successful");
+    }
   };
+   const handleSignIn = async () => {
+      await authClient.signOut.social({
+        provider: "google",
+      });
+    };
 
   return (
     <Card className=" mx-auto w-125 py-10 mt-5">
@@ -103,6 +119,15 @@ export default function SignUpPage() {
             Reset
           </Button>
         </div>
+        <p className="text-center">Or,</p>
+         <Button
+                    onClick={handleSignIn}
+                    type="submit"
+                    variant="outline"
+                    className={"w-full"}
+                  >
+                    Sign Out with Google
+                  </Button>
       </Form>
     </Card>
   );

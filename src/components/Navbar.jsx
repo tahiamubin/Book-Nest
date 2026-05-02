@@ -1,7 +1,14 @@
+'use client'
+
+import { authClient } from "@/lib/auth-client";
+import { Avatar } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 
+
 const Navbar = () => {
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm">
@@ -70,8 +77,23 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-3">
-          <a href="/signin" className="btn">Log In</a>
-          <a href="/signout" className="btn">log Out</a>
+          {!user && (
+            <ul>
+              <a href="/signin" className="btn">
+                Log In
+              </a>
+              <a href="/signout" className="btn">
+                log Out
+              </a>
+            </ul>
+          )}
+
+          {
+            user && <Avatar>
+        <Avatar.Image alt={user?.name} src={user?.Image} />
+        <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+      </Avatar>
+          }
         </div>
       </div>
     </div>
