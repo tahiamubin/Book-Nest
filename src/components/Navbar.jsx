@@ -82,7 +82,7 @@ const Navbar = () => {
                 Log In
               </a>
               <a href="/signout" className="btn">
-                log Out
+                Register
               </a>
             </ul>
           )}
@@ -95,7 +95,7 @@ const Navbar = () => {
               </Avatar>
 
               <a href="/signout" className="btn">
-                log Out
+               Register
               </a>
             </ul>
           )}

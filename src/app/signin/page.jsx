@@ -13,8 +13,10 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function SignInPage() {
+  const [errorMgs, setErrorMgs] = useState("");
   const router = useRouter();
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -31,8 +33,9 @@ export default function SignInPage() {
     });
     
     if (error) {
-      alert("login not successful")
-        router.push("/signout");
+      //alert("login not successful")
+      setErrorMgs("Login not successful");
+        
     }
    
     //console.log({ data, error });
@@ -93,11 +96,11 @@ export default function SignInPage() {
         </TextField>
 
         <div className="flex gap-2">
-          <Button href='/signout' type="submit" variant="outline" >
+          <Button  type="submit"  href='/signout' variant="outline" >
             
             Log In
           </Button>
-          <Button type="submit" variant="outline" >
+          <Button variant="outline" href="/signup">
         
             Register
           </Button>
