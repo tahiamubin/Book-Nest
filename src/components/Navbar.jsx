@@ -1,10 +1,9 @@
-'use client'
+"use client";
 
 import { authClient } from "@/lib/auth-client";
 import { Avatar } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
-
 
 const Navbar = () => {
   const userData = authClient.useSession();
@@ -42,7 +41,7 @@ const Navbar = () => {
                 <Link href={"/all-books"}>All Books</Link>
               </li>
               <li>
-                <Link href={"/pricing"}>Pricing</Link>
+                <Link href={"/contract-us"}>Contract us </Link>
               </li>
               <li>
                 <Link href={"/profile"}>Profile</Link>
@@ -69,7 +68,7 @@ const Navbar = () => {
               <Link href={"/all-books"}>All Books</Link>
             </li>
             <li>
-              <Link href={"/pricing"}>Pricing</Link>
+              <Link href={"/contract-us"}>Contract us </Link>
             </li>
             <li>
               <Link href={"/profile"}>Profile</Link>
@@ -88,12 +87,18 @@ const Navbar = () => {
             </ul>
           )}
 
-          {
-            user && <Avatar>
-        <Avatar.Image alt={user?.name} src={user?.Image} />
-        <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
-      </Avatar>
-          }
+          {user && (
+            <ul className="flex gap-2">
+              <Avatar>
+                <Avatar.Image alt={user?.name} src={user?.Image} />
+                <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+              </Avatar>
+
+              <a href="/signout" className="btn">
+                log Out
+              </a>
+            </ul>
+          )}
         </div>
       </div>
     </div>
