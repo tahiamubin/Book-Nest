@@ -23,7 +23,7 @@ const bookDetailsPage = async ({ param }) => {
     <div className="container mx-auto ">
       <h1 className="text-3xl mt-5 mb-5 font-bold">Books Details</h1>
       <div className="hero bg-base-200 min-h-screen">
-        <div className="hero-content flex-col lg:flex-row gap-5">
+        <div className="hero-content flex-col lg:flex-row gap-2">
           {/* <img
       src={book?.image_url}
     /> */}
