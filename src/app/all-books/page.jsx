@@ -23,7 +23,7 @@ const allBookPage = () => {
   const categoryBooks =
     category === "All"
       ? books
-      : books.filter((book) => book.category === category);
+      : books.category?.filter((c) => c === category);
 
   //const filterBooks = books.filter (book => book.title.toLowerCase());
   return (
@@ -84,7 +84,7 @@ const allBookPage = () => {
           <BookCard key={book.id} book={book}></BookCard>
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 space-y-6 mt-10">
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 space-y-6 mt-10">
         {categoryBooks.map((book) => (
           // <BookCard key={book.id} book={book}></BookCard>
           <div key={book.id}>
@@ -92,7 +92,7 @@ const allBookPage = () => {
             <p>{book.category}</p>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

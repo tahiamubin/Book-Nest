@@ -127,7 +127,7 @@ export default function SignUpPage() {
                     variant="outline"
                     className={"w-full"}
                   >
-                    Sign Out with Google
+                    Sign in with Google
                   </Button>
 
                   <p>Already have account <a href="/signin" className="text-blue-500" >Log In</a></p>
