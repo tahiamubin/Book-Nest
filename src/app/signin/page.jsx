@@ -44,6 +44,7 @@ export default function SignInPage() {
     await authClient.signIn.social({
       provider: "google",
     });
+    return;
   };
 
   return (

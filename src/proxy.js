@@ -10,7 +10,7 @@ export  async function proxy(request) {
 })
 
 if (!session){
-    return NextResponse.redirect(new URL('/sign-out', request.url))
+    return NextResponse.redirect(new URL('/signout', request.url))
 }
   
 }

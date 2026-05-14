@@ -48,6 +48,7 @@ export default function SignUpPage() {
       await authClient.signIn.social({
         provider: "google",
       });
+      return;
     };
 
   return (
@@ -127,7 +128,7 @@ export default function SignUpPage() {
                     variant="outline"
                     className={"w-full"}
                   >
-                    Sign in with Google
+                    Sign out  with Google
                   </Button>
 
                   <p>Already have account <a href="/signin" className="text-blue-500" >Log In</a></p>
