@@ -18,6 +18,12 @@ import { useState } from "react";
 export default function SignInPage() {
   const [errorMgs, setErrorMgs] = useState("");
   const router = useRouter();
+  
+  const handleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
   const onSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -29,22 +35,15 @@ export default function SignInPage() {
     const { data, error } = await authClient.signIn.email({
       password,
       email,
-      callbackURL: '/'
+      callbackURL: "/",
     });
-    
+
     if (error) {
       //alert("login not successful")
       setErrorMgs("Login not successful");
-        
     }
-   
+
     //console.log({ data, error });
-  };
-  const handleSignIn = async () => {
-    await authClient.signIn.social({
-      provider: "google",
-    });
-    return;
   };
 
   return (
@@ -97,26 +96,22 @@ export default function SignInPage() {
         </TextField>
 
         <div className="flex gap-2">
-          <Button  type="submit"  href='/signout' variant="outline" >
-            
+          <Button type="submit" variant="outline">
             Log In
           </Button>
           <Button variant="outline" href="/signup">
-        
             Register
           </Button>
-          
-         
         </div>
         <p className="text-xl text-center mb-2">Or,</p>
-         <Button
-            onClick={handleSignIn}
-            type="submit"
-            variant="outline"
-            className={"w-full"}
-          >
-            Sign In with Google
-          </Button>
+        <Button
+          onClick={handleSignIn}
+          type="button"
+          variant="outline"
+          className={"w-full"}
+        >
+          Sign In with Google
+        </Button>
       </Form>
     </Card>
   );

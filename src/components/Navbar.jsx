@@ -2,12 +2,23 @@
 
 import { authClient } from "@/lib/auth-client";
 import { Avatar } from "@heroui/react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
+  const handleSignOut = async () => {
+    await authClient.signOut({
+      fetchOptions: {
+        onSuccess: () => {
+          router.push("/signin"); 
+        },
+      },
+    });
+  };
+
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm">
@@ -94,9 +105,9 @@ const Navbar = () => {
                 <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
               </Avatar>
 
-              <a href="/signout" className="btn">
-               Register
-              </a>
+              <button onClick={handleSignOut} className="btn">
+                signout
+              </button>
             </ul>
           )}
         </div>

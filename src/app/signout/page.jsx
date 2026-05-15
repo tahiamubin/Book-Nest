@@ -19,38 +19,35 @@ export default function SignUpPage() {
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
-     const image = e.target.image.value;
+    const image = e.target.image.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-   
+
     //console.log({name, email, password, image})
     //RKeQVZ2YIUvctshG
 
     //7k#bN9!pQr2wZ@xY
 
-    const {data, error} = await authClient.signUp.email ({
-        name,
-        password,
-        image,
-        email,
-        
-    })
-    console.log({data, error});
-    if (error){
-        alert("SignUp not successful");
-    }
-    else { 
-         
-         router.push('/');
+    const { data, error } = await authClient.signUp.email({
+      name,
+      password,
+      image,
+      email,
+    });
+    console.log({ data, error });
+    if (error) {
+      alert("SignUp not successful");
+    } else {
+      router.push("/");
     }
   };
-   const handleSignIn = async () => {
-      await authClient.signIn.social({
-        provider: "google",
-      });
-      return;
-    };
-
+  const handleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+    return;
+  };
+ 
   return (
     <Card className=" mx-auto w-80 py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">Register</h1>
@@ -122,16 +119,21 @@ export default function SignUpPage() {
           </Button>
         </div>
         <p className="text-center">Or,</p>
-         <Button
-                    onClick={handleSignIn}
-                    type="button"
-                    variant="outline"
-                    className={"w-full"}
-                  >
-                    Sign out  with Google
-                  </Button>
+        <Button
+          onClick={handleSignIn}
+          type="button"
+          variant="outline"
+          className={"w-full"}
+        >
+          Sign out with Google
+        </Button>
 
-                  <p>Already have account <a href="/signin" className="text-blue-500" >Log In</a></p>
+        <p>
+          Already have account{" "}
+          <a href="/signin" className="text-blue-500">
+            Log In
+          </a>
+        </p>
       </Form>
     </Card>
   );
