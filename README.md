@@ -1,71 +1,68 @@
+# 📚 Book Nest
+
+A book browsing web application where users can discover, explore, and view books across multiple genres — all in one place.
+
+🔗 **Live Site:** [book-nest-tau-sable.vercel.app](https://book-nest-tau-sable.vercel.app)
+
 ---
 
-## ⚙️ Getting Started
+## Features
 
-### Prerequisites
+- Browse books by category: **Story**, **Tech**, and **Science**
+- View detailed information for each book
+- User authentication — Sign In & Register
+- Newsletter subscription
+- Fully responsive design
+- Contact page
 
-- Node.js `v18+`
-- npm or yarn
+---
 
-### Installation
+## Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Language:** JavaScript
+- **Styling:** CSS / Tailwind CSS
+- **Deployment:** Vercel
+
+---
+
+## Getting Started
 
 ```bash
-# 1. Clone the repository
+# Clone the repository
 git clone https://github.com/tahiamubin/Book-Nest.git
-
-# 2. Navigate into the project
 cd Book-Nest
 
-# 3. Install dependencies
+# Install dependencies
 npm install
 
-# 4. Start the development server
+# Run the development server
 npm run dev
 ```
 
-The app will be running at `http://localhost:5173` 🎉
-
-### Available Scripts
-
-| Command | Description |
-|---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint checks |
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🌐 Deployment
+## Project Structure
 
-This project is deployed on **Vercel**. Every push to the `main` branch triggers an automatic deployment.
-
-🔗 **Live URL:** [https://book-nest-tau-sable.vercel.app/](https://book-nest-tau-sable.vercel.app/)
-
----
-
-## 🤝 Contributing
-
-Contributions are always welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create a new branch: `git checkout -b feature/your-feature-name`
-3. Make your changes and commit: `git commit -m "Add: your feature"`
-4. Push to your branch: `git push origin feature/your-feature-name`
-5. Open a Pull Request
+```
+Book-Nest/
+├── public/          # Static assets (images, logo)
+├── src/             # Application source code
+├── next.config.mjs
+├── package.json
+└── README.md
+```
 
 ---
 
-## 📄 License
+## Deployment
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+Deployed on [Vercel](https://vercel.com). Any push to the `main` branch triggers an automatic deployment.
 
 ---
 
-<div align="center">
+## License
 
-  Made with ❤️ by [Tahia Mubin](https://github.com/tahiamubin)
-
-  ⭐ If you like this project, give it a star — it means a lot!
-
-</div>
+This project is open source and available under the [MIT License](LICENSE).
